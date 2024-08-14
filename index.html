@@ -37,6 +37,7 @@
         .gallery-item {
             overflow: hidden;
             border-radius: 10px;
+            position: relative;
         }
 
         .gallery-item img,
@@ -54,7 +55,7 @@
 
         .gallery-item audio {
             background-color: black;
-            height: 200px; /* Set the height of the audio player */
+            height: 50px; /* Set the height of the audio player */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,12 +68,19 @@
             transform: scale(1.05);
         }
 
+        /* Customize audio controls to better match the design */
         .gallery-item audio::-webkit-media-controls-panel {
-            background-color: transparent; /* Hide default controls panel */
+            background-color: black;
         }
 
-        .gallery-item audio::-webkit-media-controls-play-button {
-            color: white; /* Color the play button white for visibility */
+        .gallery-item audio::-webkit-media-controls-play-button,
+        .gallery-item audio::-webkit-media-controls-timeline,
+        .gallery-item audio::-webkit-media-controls-current-time-display,
+        .gallery-item audio::-webkit-media-controls-time-remaining-display,
+        .gallery-item audio::-webkit-media-controls-mute-button,
+        .gallery-item audio::-webkit-media-controls-volume-slider-container,
+        .gallery-item audio::-webkit-media-controls-fullscreen-button {
+            filter: invert(1) brightness(1.5); /* Make controls visible against dark background */
         }
     </style>
 </head>
