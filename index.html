@@ -15,13 +15,13 @@
 
         header {
             background-color: #ffffff;
-            padding: 5px; /* Reduced padding */
+            padding: 5px;
             text-align: center;
-            margin-bottom: 5px; /* Reduced margin to decrease space below the header */
+            margin-bottom: 5px;
         }
 
         header img {
-            max-width: 400px; /* Adjust the size as needed */
+            max-width: 400px;
             height: auto;
         }
 
@@ -37,7 +37,6 @@
         .gallery-item {
             overflow: hidden;
             border-radius: 10px;
-            position: relative;
         }
 
         .gallery-item img,
@@ -49,13 +48,14 @@
             transition: transform 0.3s ease;
         }
 
-        .gallery-item video {
+        .gallery-item video,
+        .gallery-item audio {
             border-radius: 10px;
         }
 
         .gallery-item audio {
             background-color: black;
-            height: 50px; /* Set the height of the audio player */
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,41 +67,26 @@
         .gallery-item audio:hover {
             transform: scale(1.05);
         }
-
-        /* Customize audio controls to better match the design */
-        .gallery-item audio::-webkit-media-controls-panel {
-            background-color: black;
-        }
-
-        .gallery-item audio::-webkit-media-controls-play-button,
-        .gallery-item audio::-webkit-media-controls-timeline,
-        .gallery-item audio::-webkit-media-controls-current-time-display,
-        .gallery-item audio::-webkit-media-controls-time-remaining-display,
-        .gallery-item audio::-webkit-media-controls-mute-button,
-        .gallery-item audio::-webkit-media-controls-volume-slider-container,
-        .gallery-item audio::-webkit-media-controls-fullscreen-button {
-            filter: invert(1) brightness(1.5); /* Make controls visible against dark background */
-        }
     </style>
 </head>
 
 <body>
     <header>
-        <img src="assets/fm see.png" alt="Logo">
+        <img src="assets/fm%20see.png" alt="Logo">
     </header>
 
     <div class="gallery-container">
         <!-- Video Item -->
         <div class="gallery-item">
             <video controls>
-                <source src="assets/WHO YOU SEEING.mov" type="video/mp4">
+                <source src="assets/WHO%20YOU%20SEEING.mov" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
 
         <div class="gallery-item">
             <video controls>
-                <source src="assets/SWITCHED OUT MY JEANS 5.mp4" type="video/mp4">
+                <source src="assets/SWITCHED%20OUT%20MY%20JEANS%205.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -109,14 +94,14 @@
         <!-- Audio Item -->
         <div class="gallery-item">
             <audio controls>
-                <source src="assets/ELASTIC 2.wav" type="audio/wav">
+                <source src="assets/ELASTIC%202.wav" type="audio/wav">
                 Your browser does not support the audio element.
             </audio>
         </div>
 
         <div class="gallery-item">
             <audio controls>
-                <source src="assets/HALF A YEAR 3.wav" type="audio/wav">
+                <source src="assets/HALF%20A%20YEAR%203.wav" type="audio/wav">
                 Your browser does not support the audio element.
             </audio>
         </div>
