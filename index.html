@@ -58,7 +58,8 @@
             color: #333333;
         }
 
-        .gallery-container {
+        .gallery-container,
+        .audio-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
@@ -68,42 +69,48 @@
             background-color: #ffffff;
         }
 
+        .audio-container {
+            margin-top: 10px; /* Add space between video and audio sections */
+        }
+
         .gallery-item video,
         .gallery-item audio {
             width: 100%;
-            height: 200px; /* Set a fixed height for consistency */
             object-fit: cover;
             border-radius: 10px;
             display: block;
         }
 
+        .gallery-item video {
+            height: 200px; /* Set a fixed height for videos */
+        }
+
+        .gallery-item audio {
+            height: 50px; /* Set a fixed height for audio */
+        }
+
         .media-title {
             text-align: center;
-            font-size: 10px; /* Slightly larger font size for the title */
+            font-size: 10px; /* Font size for the title */
             letter-spacing: 1px;
             text-transform: uppercase;
             color: #333333;
             margin-bottom: 10px;
         }
 
-        .audio-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 200px;
-            padding: 20px;
-            margin: 0 auto;
-            max-width: 800px;
-            background-color: #ffffff;
-        }
-
-        .gallery-item audio {
-            height: 50px; /* Adjusted height for the audio elements */
-        }
-
         @media (max-width: 600px) {
-            .gallery-item:nth-child(2) .media-title {
-                margin-top: -15px; /* Move the title upwards on mobile */
-                margin-bottom: 11px; /* Adjust margin for consistency */
+            .audio-container {
+                grid-template-columns: repeat(3, 1fr); /* Maintain 3-column layout */
+            }
+
+            .audio-container .gallery-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .audio-container .media-title {
+                margin-bottom: 5px; /* Adjust spacing for consistency */
             }
         }
     </style>
@@ -158,6 +165,14 @@
 
     <!-- Audio Files Row -->
     <div class="audio-container">
+
+        <div class="gallery-item">
+            <div class="media-title">GREYISH TINT</div>
+            <audio controls>
+                <source src="assets/GREYISH TINT.mp3" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
 
         <div class="gallery-item">
             <div class="media-title">Elastic 2</div>
